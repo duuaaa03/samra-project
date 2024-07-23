@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Elemant by class Name</h2>
+<p>hello</p>
+<p class="intro"> the DOM is very useful.</p>
+<p class="intro">this Example demonstrates the <b>getElementByClassName</b> method.</p>
+<p id="demo"></p>
+<script>
+
+var a = document.getElementsByClassName("intro");
+document.getElementById("demo") .innerHTML = 
+'the first paragraph (index 0) with class="intro":' +
+a[0]. innerHTML;
+
+
+
+</script>
+
+</body>
+</html>

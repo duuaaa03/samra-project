@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ad to cart Example</title>
+</head>
+<body>
+    <div class="product">
+<img src="c:\Users\asp\Downloads\download.jfif" alt="product image">
+<h2>product Name</h2>
+<p>$59.99></p>
+<button onclick="addTocart()">add to cart</button>
+    
+</div>
+
+<div id="cart">
+<h2>shopping cart</h2>
+<ul id="cart-item"></ul>
+<p>Total: $<span id="cart-total">0.00</span></p>
+
+</div>
+<script>
+let cartItem =[];
+let total=0;
+
+function addTocart(){
+const productName = "product Name";
+const price = 59.99;
+cartItem.push({name: productName,price: price});
+total +=price;
+displaycart();
+
+}
+function displaycart(){
+const cartList = document.getElementById('cart-item');
+const cartTotal = document.getElementById('cart-total');
+cartList.innerHTML = '';
+cartItem.forEach(item => {
+const li = document.createElement('li');
+li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+cartList.appendChild(li);
+
+});
+cartTotal.textContent = total.toFixed(2);
+
+}
+
+
+
+
+</script>
+</body>
+</html>

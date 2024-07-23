@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Email</label>
+<input type="Email" id="Email"><br> <br>
+
+<label for="">password</label>
+<input type="password" id="password"> <br> <br>
+
+<input type="button" value="login" onclick="login()">
+
+<script>
+function login(){
+
+let user_Email = document.querySelector('#Email').value
+let user_pass = document.querySelector('#password').value
+
+
+if( user_Email == "" || user_pass == ""){
+    alert('please fill field')
+}
+else{
+    alert("your email is" + user_Email+ "and your pass is" +user_pass[''])
+}
+
+}
+
+</script>
+
+</body>
+</html>
